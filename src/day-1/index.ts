@@ -1,20 +1,20 @@
 const path = "src/day-1/input.txt"
 const file = Bun.file(path)
-const text = await file.text();
+const text = await file.text()
 const lines = text.split("\n")
 
 const MAX_VALUE = 100
 const START_VALUE = 50
 
 function relativeValue(value: number, max: number) {
-  return ((value % max) + max) % max;
+  return ((value % max) + max) % max
 }
 
 function parseLine(line: string) {
-  const direction = line[0];
-  const value = Number(line.slice(1));
+  const direction = line[0]
+  const value = Number(line.slice(1))
 
-  return { direction, value };
+  return { direction, value }
 }
 
 function partOne() {

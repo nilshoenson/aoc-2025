@@ -1,6 +1,6 @@
 const path = "src/day-2/input.txt"
 const file = Bun.file(path)
-const text = await file.text();
+const text = await file.text()
 const ranges = text.split(",")
 
 function parseRange(range: string) {
