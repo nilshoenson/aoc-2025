@@ -52,12 +52,12 @@ function partTwo() {
     const values = parseLine(line)
 
     let elements = []
-    let testIndex = 0
+    let startIndex = 0
 
     for (let index = 0; index < REQUIRED_CHARACTERS; index++) {
       let removed = REQUIRED_CHARACTERS - (index + 1)
-      const { value, index: updatedIndex } = getLargestValues(values, testIndex, values.length - removed)
-      testIndex = (updatedIndex + 1)
+      const { value, index: updatedIndex } = getLargestValues(values, startIndex, values.length - removed)
+      startIndex = (updatedIndex + 1)
 
       elements.push(value)
     }
