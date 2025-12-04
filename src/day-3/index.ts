@@ -31,7 +31,7 @@ function partOne() {
 
   for (const line of lines) {
     const values = parseLine(line)
-    
+
     const { value: firstValue, index: firstIndex } = getLargestValues(values, 0, values.length - 1)
     const { value: secondValue } = getLargestValues(values, firstIndex + 1, values.length)
 
@@ -44,6 +44,34 @@ function partOne() {
   return count
 }
 
+function partTwo() {
+  const REQUIRED_CHARACTERS = 12
+  let count = 0
+
+  for (const line of lines) {
+    const values = parseLine(line)
+
+    let elements = []
+    let testIndex = 0
+
+    for (let index = 0; index < REQUIRED_CHARACTERS; index++) {
+      let removed = REQUIRED_CHARACTERS - (index + 1)
+      const { value, index: updatedIndex } = getLargestValues(values, testIndex, values.length - removed)
+      testIndex = (updatedIndex + 1)
+
+      elements.push(value)
+    }
+
+    const sum = Number(elements.join(""));
+
+    count += sum
+  }
+
+  return count
+}
+
 const resultOne = partOne()
+const resultTwo = partTwo()
 
 console.log(`The total output joltage is: ${resultOne}`)
+console.log(`The total output joltage is: ${resultTwo}`)
