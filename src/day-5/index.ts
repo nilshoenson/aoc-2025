@@ -1,4 +1,4 @@
-const path = "src/day-5/sample.txt"
+const path = "src/day-5/input.txt"
 const file = Bun.file(path)
 const text = await file.text()
 const lines = text.split("\n")

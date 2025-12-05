@@ -129,5 +129,5 @@ function partTwo() {
 const resultOne = partOne()
 const resultTwo = partTwo()
 
-console.log(`The total roles of paper that can be accessed are: ${resultOne}`)
-console.log(`The total roles of paper that can be accessed are: ${resultTwo}`)
+console.log(`The total rolls of paper that can be accessed are: ${resultOne}`)
+console.log(`The total rolls of paper that can be accessed are: ${resultTwo}`)
